@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - Custom New Tab URL</title>
+  <link rel="stylesheet" href="../common/styles.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo-area">
+        <img src="../../icons/icon-48.png" alt="Extension Logo" class="logo-img">
+        <div>
+          <h1>Custom New Tab URL</h1>
+          <p class="subtitle">Settings &amp; Configuration</p>
+        </div>
+      </div>
+      <span class="version-tag">v0.1.0</span>
+    </header>
+
+    <main class="card">
+      <form id="options-form" novalidate>
+        <div class="form-group">
+          <label for="url-input" class="form-label">Destination URL</label>
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="url-input" 
+              name="customUrl" 
+              placeholder="e.g. https://google.com or github.com" 
+              autocomplete="off" 
+              spellcheck="false"
+              autofocus
+            >
+          </div>
+          <p class="form-hint">
+            Enter the web address you want opened automatically when a new tab opens.
+            If omitted, <code>https://</code> will be added automatically.
+          </p>
+        </div>
+
+        <div id="status-message" class="status-message hidden" role="alert" aria-live="polite"></div>
+
+        <div class="form-actions">
+          <button type="submit" id="save-btn" class="btn btn-primary">
+            Save Changes
+          </button>
+          <button type="button" id="test-btn" class="btn btn-secondary">
+            Test URL
+          </button>
+          <button type="button" id="reset-btn" class="btn btn-ghost">
+            Reset to Default
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <p>Custom New Tab URL is open source &amp; privacy friendly.</p>
+    </footer>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
+

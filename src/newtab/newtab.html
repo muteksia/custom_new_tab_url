@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Tab</title>
+  <link rel="stylesheet" href="../common/styles.css">
+  <link rel="stylesheet" href="newtab.css">
+</head>
+<body>
+  <!-- Loading state container -->
+  <div id="loader-state" class="state-container">
+    <div class="spinner" aria-label="Loading new tab..."></div>
+  </div>
+
+  <!-- Onboarding / Welcome state displayed when no URL is configured -->
+  <div id="welcome-state" class="state-container hidden">
+    <div class="welcome-card">
+      <div class="icon-bubble">
+        <img src="../../icons/icon-48.png" alt="Extension Logo" class="welcome-icon">
+      </div>
+      <h1 class="welcome-title">Custom New Tab URL</h1>
+      <p class="welcome-desc">
+        You haven't configured a custom destination yet. Choose any website or dashboard to open automatically whenever you open a new tab.
+      </p>
+      <div class="welcome-actions">
+        <button id="open-settings-btn" class="btn btn-primary">
+          Configure Destination URL
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="newtab.js"></script>
+</body>
+</html>
+
